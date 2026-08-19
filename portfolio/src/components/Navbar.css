@@ -1,0 +1,241 @@
+.navbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(15px);
+
+  border-bottom: 1px solid #f0e2c1;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.navbar-container {
+  width: 100%;
+
+  max-width: 1400px;
+
+  height: 80px;
+
+  margin: 0 auto;
+
+  padding: 0 5%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  position: relative;
+
+  text-decoration: none;
+
+  color: #202020;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo span {
+  color: #f97316;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 6px;
+
+  background: #fffaf0;
+
+  border: 1px solid #f0e2c1;
+
+  border-radius: 10px;
+}
+
+
+/* Individual link */
+
+.navbar-links a {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 14px;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  color: #6b7280;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* Icon */
+
+.navbar-links a svg {
+  font-size: 13px;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* Hover */
+
+.navbar-links a:hover {
+  color: #d99a00;
+
+  background: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.navbar-links a:hover svg {
+  color: #f97316;
+
+  transform: scale(1.15);
+}
+
+
+/* =========================
+   CONTACT HIGHLIGHT
+========================= */
+
+.navbar-links a:last-child {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #d99a00,
+    #f97316
+  );
+
+  box-shadow:
+    0 5px 15px rgba(217, 154, 0, 0.2);
+}
+
+.navbar-links a:last-child svg {
+  color: #ffffff;
+}
+
+.navbar-links a:last-child:hover {
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(249, 115, 22, 0.25);
+}
+
+.navbar-links a:last-child:hover svg {
+  color: #ffffff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+  .navbar-container {
+    height: auto;
+
+    padding: 15px 5%;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .navbar-links {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 3px;
+  }
+
+  .navbar-links a {
+    padding: 9px 10px;
+
+    font-size: 11px;
+  }
+
+  .navbar-links a svg {
+    font-size: 11px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .navbar-logo {
+    font-size: 23px;
+  }
+
+  .navbar-links {
+    padding: 4px;
+  }
+
+  .navbar-links a {
+    padding: 8px 7px;
+
+    gap: 5px;
+  }
+
+  .navbar-links a span {
+    font-size: 10px;
+  }
+
+}
